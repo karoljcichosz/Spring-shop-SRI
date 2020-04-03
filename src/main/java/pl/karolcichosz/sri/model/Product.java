@@ -24,7 +24,7 @@ public class Product implements Serializable {
 
 	@Version
 	@Column(name = "version")
-	private int version;
+	private Integer version;
 
 	@Column(name = "name", nullable = false)
 	private String name;
@@ -32,7 +32,7 @@ public class Product implements Serializable {
 	@Column(name = "stock", nullable = false)
 	private Integer stock;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 //	@Column(name = "category_id")
 	@JoinColumn(name="CATEGORY_ID")
 	private Category category;

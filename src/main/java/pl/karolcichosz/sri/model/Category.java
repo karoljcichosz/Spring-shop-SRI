@@ -19,13 +19,13 @@ public class Category implements Serializable {
 	@Column(name = "name", nullable = false)
 	private String name;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	// @Column(name = "parent_category_id")
 	@JoinColumn(name = "PARENT_CATEGORY_ID")
 	private Category parentCategory;
 	
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy="parentCategory")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy="parentCategory")
 	private Set<Category> childCategories;
 
 	public Long getId() {
