@@ -1,5 +1,8 @@
 package pl.karolcichosz.sri.model;
 
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 import javax.persistence.Column;

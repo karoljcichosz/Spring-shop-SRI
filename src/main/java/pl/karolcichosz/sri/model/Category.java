@@ -1,5 +1,6 @@
 package pl.karolcichosz.sri.model;
 
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
